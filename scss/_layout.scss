@@ -11,6 +11,7 @@
   .right {
     flex: 0 0 30%;
     ul { @extend %ul-zero; }
+    h3 { color: $grey; }
   }//right
 
   @include breakpoint(med) { // 768 - MEDIUM =================================
