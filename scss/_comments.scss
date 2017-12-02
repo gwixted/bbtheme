@@ -1,0 +1,10 @@
+#comments-list {
+  ul { @extend %ul-zero; }
+  li {
+    margin-bottom: 10px;
+    padding: 20px;
+    background: rgba(0,0,0,0.05);
+    font-size: 0.95rem;
+    li { padding: 14px; }
+  }//li
+}//comments-list

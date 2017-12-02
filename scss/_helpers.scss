@@ -1,0 +1,91 @@
+// RESPONSIVE MIXINS =======================================
+@mixin breakpoint($point) {
+  @if $point == xsmall {
+    @media (max-width: 480px) { @content; }
+  }//small = < 414
+  @if $point == small {
+    @media (max-width: 667px) { @content; }
+  }//small = < 667
+  @else if $point == med {
+    @media (max-width: 768px) { @content; }
+  }//medium = < 768
+  @else if $point == lg {
+    @media (max-width: 890px) { @content; }
+  }//large = < 1024
+  @else if $point == xlg {
+    @media (max-width: 1024px) { @content; }
+  }//xlarge = < 1200
+  @else if $point == xxlg {
+    @media (max-width: 1200px) { @content; }
+  }//xxlarge = > 1430
+}//breakpoint
+/* USAGE
+@include breakpoint(xlg) { // XLARGE =================================
+
+}//xlarge
+
+@include breakpoint(lg) { // LARGE =================================
+
+}//large
+
+@include breakpoint(med) { // MEDIUM =================================
+
+}//medium
+
+@include breakpoint(small) { // SMALL ================================
+
+}//small
+
+@include breakpoint(xsmall) { // XSMALL ================================
+
+}//xsmall
+*/
+
+// ============================================================
+//  HELPER CLASSES
+// ============================================================
+.fll { float:left; }
+.flr { float:right; }
+.clear { clear: both; }
+.dn { display: none; }
+.df { display: flex; }
+.db { display: block; }
+.dib { display: inline-block; }
+.valt { vertical-align: top; }
+.valm { vertical-align: middle; }
+.valb { vertical-align: bottom; }
+
+// ============================================================
+//  CLASSES TO EXTEND
+// ============================================================
+%ul-zero {
+  margin: 0;
+  padding: 0;
+  list-style: none !important;
+}//%ul-zero
+
+.ul-zero { @extend %ul-zero; }
+
+%dtrans { transition: all 0.3s ease-in-out; }
+%dtransfast { transition: all 0.15s ease-in-out; }
+%dtransslow { transition: all 0.5s ease-in-out; }
+
+// ============================================================
+//  MIXINS
+// ============================================================
+@mixin plr($pl:2%,$pr:2%) {
+  padding-left: $pl;
+  padding-right: $pr;
+}
+
+@mixin ptb($pt:2%,$pb:2%) {
+  padding-top: $pt;
+  padding-bottom: $pb;
+}
+
+@mixin fluidImg($w:200px,$mw:100%,$h:auto) {
+  display: block;
+  width: $w;
+  max-width: $mw;
+  height: $h;
+}

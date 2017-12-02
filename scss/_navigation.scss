@@ -1,0 +1,51 @@
+// ============================================================
+//  HEADER NAV
+// ============================================================
+nav#menu {
+  align-self: flex-end;
+  padding: 10px 0;
+  ul {
+    display: flex;
+    @extend %ul-zero;
+  }//ul
+  li { margin-left: 20px; }
+  a {
+    font-size: 0.9em;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }//a
+}//nav#menu
+
+// ============================================================
+//  MOBILE NAV
+// ============================================================
+#mobile-menu {
+  position: fixed;
+  right: -400px;
+  top: 70px;
+  width: 400px;
+  max-width: 100%;
+  height: 100%;
+  padding: 20px 20px 60px;
+  background: #eee;
+  overflow: auto;
+  opacity: 0;
+  @extend %dtransfast;
+  z-index: 1200;
+  .logged-in & { top: 102px; }
+  &.vis {
+    right: 0;
+    opacity: 1;
+  }//vis
+  ul {
+    @extend %ul-zero;
+    text-align: right;
+  }//ul
+  li { margin-bottom: 10px; }
+  a {
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }//a
+}//#mobile-menu

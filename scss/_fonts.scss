@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,400i,600,600i|Oswald:300');
+
+$sans:'Montserrat',sans-serif;
+// 400(i), 600(i)
+$headline:'Oswald',sans-serif;
+// 300
+$iconfont: "Ionicons";
+.ion:before { font-family: $iconfont !important; }
+// http://ionicons.com/

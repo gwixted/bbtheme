@@ -1,0 +1,29 @@
+.layout-sidebar-right {
+  .inner-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-wrap: wrap;
+  }//inner-wrap
+  .content-main {
+    flex: 0 0 65%;
+  }//content-main
+  .right {
+    flex: 0 0 30%;
+    ul { @extend %ul-zero; }
+  }//right
+
+  @include breakpoint(med) { // 768 - MEDIUM =================================
+    .inner-wrap { display: block; }
+    .content-main { max-width: 100%; }
+    .right { display: none; }
+  }//medium
+
+  @include breakpoint(small) { // 667 - SMALL ================================
+
+  }//small
+
+  @include breakpoint(xsmall) { // 480 - XSMALL ================================
+
+  }//xsmall
+}//layout-sidebar-right
